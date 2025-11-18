@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink],
   template: `
     <section class="hero">
-      <!-- Background Photo -->
+      <!-- Background Photo with blur -->
       <div class="hero-photo">
         <img src="assets/images/hero-background.png" alt="Hero Background" class="bg-image">
       </div>
@@ -17,20 +17,6 @@ import { RouterLink } from '@angular/router';
       <div class="hero-white-bg">
         <!-- Header Navigation -->
         <div class="header-nav">
-          <!-- Main Content Frame -->
-          <div class="main-content-frame">
-            <!-- Text Content -->
-            <div class="text-content">
-              <p class="subtitle">ESTRATEGIA Y PROPÓSITO PARA QUIENES PIENSAN EN GRANDE</p>
-              <h1 class="main-title">
-                Haz de tu vida tu<br>
-                mejor inversión
-              </h1>
-            </div>
-            <!-- CTA Button -->
-            <button class="cta-button">EMPIEZA HOY</button>
-          </div>
-
           <!-- Navigation Component -->
           <div class="nav-component">
             <!-- Left Navigation -->
@@ -83,8 +69,21 @@ import { RouterLink } from '@angular/router';
               <img src="assets/images/logo.svg" alt="EA Logo" class="logo-img">
             </div>
           </div>
-        </div>
 
+          <!-- Main Content Frame -->
+          <div class="main-content-frame">
+            <!-- Text Content -->
+            <div class="text-content">
+              <p class="subtitle">ESTRATEGIA Y PROPÓSITO PARA QUIENES PIENSAN EN GRANDE</p>
+              <h1 class="main-title">
+                Haz de tu vida tu<br>
+                mejor inversión
+              </h1>
+            </div>
+            <!-- CTA Button -->
+            <button class="cta-button">EMPIEZA HOY</button>
+          </div>
+        </div>
       </div>
 
       <!-- Mobile Sidebar -->
@@ -112,7 +111,6 @@ import { RouterLink } from '@angular/router';
               <div class="nav-item">
                 <a routerLink="/recursos" class="nav-text" (click)="closeMobileMenu()">recursos</a>
               </div>
-
             </div>
           </div>
         </div>

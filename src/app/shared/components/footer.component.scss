@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1440px;
   height: fit-content;
   background: #DFD9CE;
-  margin: 0 auto;
+  position: relative;
+  z-index: 100;
 
   // Header Nav Section
   .header-nav {

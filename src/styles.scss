@@ -1,3 +1,6 @@
+// Import Google Fonts and custom fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 // Import responsive system
 @import 'scss/breakpoints';
 @import 'scss/typography';
@@ -15,11 +18,13 @@
 }
 
 html {
-  font-size: 16px; // Base font size
+  font-size: 16px;
   scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
   
   @include mobile-lg-down {
-    font-size: 14px; // Smaller base on mobile
+    font-size: 14px;
   }
 }
 
@@ -28,9 +33,12 @@ body {
   line-height: var(--line-height-normal);
   color: var(--color-primary);
   background-color: var(--color-background);
-  overflow-x: hidden; // Prevent horizontal scroll
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
 }
 
 // Enhanced CSS Variables
@@ -48,9 +56,10 @@ body {
   --color-success: #10B981;
   --color-warning: #F59E0B;
   
-  // Fonts
+  // Fonts - exact Figma specifications
   --font-primary: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-secondary: 'Playfair Display', 'At Gambit', Georgia, serif;
+  --font-secondary: 'At Gambit', Georgia, serif;
+  --font-tertiary: 'Aeonik TRIAL', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   // Border radius
   --border-radius: 0.5rem;

@@ -1,0 +1,25 @@
+.meet-brands {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: fit-content;
+  
+  .meet-brands-content {
+    padding: 80px;
+    text-align: center;
+    width: 100%;
+    
+    p {
+      color: #0F1018;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .meet-brands-content {
+      padding: 40px 24px;
+    }
+  }
+}
