@@ -1,0 +1,186 @@
+// Grid System - Desktop First
+@import 'breakpoints';
+
+// CSS Grid Layout System
+.grid {
+  display: grid;
+  gap: var(--grid-gap, 2rem);
+  
+  // Desktop: 12 columnas base
+  &--12 {
+    grid-template-columns: repeat(12, 1fr);
+    
+    @include laptop-down {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    
+    @include tablet-lg-down {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    
+    @include mobile-lg-down {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    
+    @include mobile-md-down {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  // Layouts específicos
+  &--hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+    
+    @include tablet-lg-down {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      gap: 3rem;
+    }
+  }
+  
+  &--features {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include laptop-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include tablet-lg-down {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--testimonials {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include desktop-md-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include tablet-lg-down {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Flexbox utilities
+.flex {
+  display: flex;
+  
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &--between {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &--column {
+    flex-direction: column;
+  }
+  
+  &--wrap {
+    flex-wrap: wrap;
+  }
+  
+  &--responsive {
+    @include tablet-lg-down {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}
+
+// Grid item utilities
+.col {
+  &--span-1 { grid-column: span 1; }
+  &--span-2 { grid-column: span 2; }
+  &--span-3 { grid-column: span 3; }
+  &--span-4 { grid-column: span 4; }
+  &--span-5 { grid-column: span 5; }
+  &--span-6 { grid-column: span 6; }
+  &--span-7 { grid-column: span 7; }
+  &--span-8 { grid-column: span 8; }
+  &--span-9 { grid-column: span 9; }
+  &--span-10 { grid-column: span 10; }
+  &--span-11 { grid-column: span 11; }
+  &--span-12 { grid-column: span 12; }
+  
+  // Responsive column spans
+  @include laptop-down {
+    &--span-9,
+    &--span-10,
+    &--span-11,
+    &--span-12 {
+      grid-column: span 8;
+    }
+  }
+  
+  @include tablet-lg-down {
+    &--span-7,
+    &--span-8,
+    &--span-9,
+    &--span-10,
+    &--span-11,
+    &--span-12 {
+      grid-column: span 6;
+    }
+  }
+  
+  @include mobile-lg-down {
+    &--span-5,
+    &--span-6,
+    &--span-7,
+    &--span-8,
+    &--span-9,
+    &--span-10,
+    &--span-11,
+    &--span-12 {
+      grid-column: span 4;
+    }
+  }
+  
+  @include mobile-md-down {
+    &--span-2,
+    &--span-3,
+    &--span-4,
+    &--span-5,
+    &--span-6,
+    &--span-7,
+    &--span-8,
+    &--span-9,
+    &--span-10,
+    &--span-11,
+    &--span-12 {
+      grid-column: span 1;
+    }
+  }
+}
+
+// Container system
+.container {
+  @include container-responsive;
+  
+  &--fluid {
+    max-width: 100%;
+    padding: 0 2rem;
+    
+    @include mobile-lg-down {
+      padding: 0 1rem;
+    }
+  }
+  
+  &--narrow {
+    max-width: 800px;
+  }
+  
+  &--wide {
+    max-width: 1600px;
+  }
+}

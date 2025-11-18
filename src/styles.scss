@@ -1,0 +1,140 @@
+// Import responsive system
+@import 'scss/breakpoints';
+@import 'scss/typography';
+@import 'scss/grid-system';
+@import 'scss/spacing';
+@import 'scss/components';
+
+// Global reset and base styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; // Base font size
+  scroll-behavior: smooth;
+  
+  @include mobile-lg-down {
+    font-size: 14px; // Smaller base on mobile
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: var(--line-height-normal);
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  overflow-x: hidden; // Prevent horizontal scroll
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Enhanced CSS Variables
+:root {
+  // Colors
+  --color-primary: #0F1018;
+  --color-secondary: #E1E2DD;
+  --color-accent: #F2F2F0;
+  --color-background: #FFFFFF;
+  --color-background-alt: #F6F4E9;
+  --color-border: rgba(89, 71, 57, 0.2);
+  --color-text-secondary: #6B7280;
+  --color-text-muted: #9CA3AF;
+  --color-error: #EF4444;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  
+  // Fonts
+  --font-primary: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: 'Playfair Display', 'At Gambit', Georgia, serif;
+  
+  // Border radius
+  --border-radius: 0.5rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-lg: 1rem;
+  
+  // Transitions
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  // Z-index scale
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+// Utility classes
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+// Responsive utilities
+.hidden {
+  display: none;
+}
+
+.visible-desktop {
+  @include tablet-lg-down {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  display: none;
+  
+  @include tablet-only {
+    display: block !important;
+  }
+}
+
+.visible-mobile {
+  display: none;
+  
+  @include mobile-only {
+    display: block !important;
+  }
+}
+
+// Image optimization
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Focus styles for accessibility
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+// Smooth scrolling for anchor links
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
