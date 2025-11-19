@@ -1,30 +1,165 @@
 .investment-section {
-  width: 1440px;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 56px;
-  
-  .investment-content {
-    padding: 80px;
-    text-align: center;
-    
-    p {
-      color: #0F1018;
-      font-family: 'Lato', sans-serif;
-      font-size: 18px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 80px 80px 56px;
+    width: 1440px;
+    height: 708px;
+    position: relative;
+    background: url('/assets/images/pages/home/investors-section.jpg') center/cover;
+
+    .overlay-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28, 28, 28, 0.4) 0%, rgba(28, 28, 28, 0.8) 95%);
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      width: 100%;
+      height: 100%;
+    }
+
+    .investment-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 600px;
+      color: #FFFFFF;
+
+      .section-title {
+        font-family: 'At Gambit', serif;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 1.2em;
+        margin: 0;
+        color: #FFFFFF;
+      }
+
+      .section-description {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5em;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 16px 0;
+
+        .feature-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          .feature-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: #FFFFFF;
+            color: #0F1018;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+          }
+
+          .feature-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .cta-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 32px;
+        height: 52px;
+        background: #FFFFFF;
+        color: #0F1018;
+        border: none;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: fit-content;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.9);
+          transform: translateY(-2px);
+        }
+      }
     }
   }
-  
+
   @media (max-width: 1440px) {
-    width: 100%;
+    .photo-container {
+      width: 100%;
+    }
   }
-  
+
   @media (max-width: 768px) {
     gap: 32px;
-    
-    .investment-content {
-      padding: 40px 24px;
+
+    .photo-container {
+      padding: 40px 24px 32px;
+      height: 500px;
+
+      .investment-content {
+        max-width: 100%;
+
+        .section-title {
+          font-size: 32px;
+        }
+
+        .section-description {
+          font-size: 16px;
+        }
+
+        .cta-button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .photo-container {
+      height: 400px;
+
+      .investment-content {
+        .section-title {
+          font-size: 28px;
+        }
+
+        .section-description {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

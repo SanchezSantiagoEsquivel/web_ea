@@ -49,7 +49,11 @@ tsconfig.json: Configuración raíz de TypeScript para el proyecto.
 
 app/: El corazón de la aplicación, donde reside el código de Angular. Aquí se encuentran los componentes principales como app.component.ts y el enrutador app.routes.ts.
 
-assets/: Para archivos estáticos como imágenes, fuentes e iconos.
+assets/: Para archivos estáticos como imágenes, fuentes, iconos y videos.
+  - images/: Imágenes organizadas por páginas y funcionalidades
+  - videos/: Archivos de video para testimoniales, demos y contenido multimedia
+  - fonts/: Fuentes personalizadas (si las hay)
+  - icons/: Iconos SVG y otros formatos
 
 environments/: Contiene archivos de configuración específicos para cada entorno (desarrollo, producción, etc.).
 
