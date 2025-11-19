@@ -2,35 +2,29 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 120px;
+  padding: 10px 0px 0px 120px;
   width: 100%;
-  max-width: 1440px;
   height: 516px;
   background: #EDEBE5;
   position: relative;
-  margin: 0 auto;
 
-
-
-  // Content Frame
   .content-frame {
     display: flex;
-    flex-direction: column;
     gap: 68px;
-    width: 707px;
-    height: fit-content;
-    z-index: 10;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
-    .newsletter-title {
+    .title {
       color: #1E1E1E;
-      font-family: 'Playfair Display', 'At Gambit', serif;
+      font-family: "At Gambit";
       font-size: 56px;
+      font-style: normal;
       font-weight: 600;
-      line-height: 1.08em;
+      line-height: 108%;
       text-align: left;
       margin: 0;
       width: 100%;
-      height: fit-content;
     }
 
     .input-container {
@@ -38,7 +32,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 8px;
-      padding: 10px 0 10px 24px;
+      padding: 10px 0px 10px 24px;
       width: 580px;
       height: 51px;
       background: #FFFFFF;
@@ -47,24 +41,28 @@
 
       .email-input {
         color: #6B7280;
-        font-family: 'Inter', 'Aeonik TRIAL', sans-serif;
+        font-family: "At Gambit";
         font-size: 16px;
+        font-style: normal;
         font-weight: 400;
-        line-height: 1.5em;
+        line-height: 24px;
         text-align: left;
         border: none;
         outline: none;
         background: transparent;
         flex: 1;
-        height: 100%;
-        width: 100%;
 
         &::placeholder {
           color: #6B7280;
+          font-family: "At Gambit";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
         }
       }
 
-      .cta-button {
+      .subscribe-btn {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -75,62 +73,30 @@
         background: linear-gradient(90deg, rgba(15, 16, 24, 1) 0%, rgba(60, 60, 44, 1) 100%);
         border: none;
         cursor: pointer;
-        transition: var(--transition);
 
-        .cta-text {
-          color: #FFFFFF;
-          font-family: 'Inter', 'WF Visual Sans', sans-serif;
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 1.2em;
-          text-align: center;
-          width: fit-content;
-          height: fit-content;
-        }
-
-        &:hover {
-          opacity: 0.9;
-        }
+        color: #FFF;
+        text-align: center;
+        font-family: "At Gambit";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120.192%;
       }
     }
-  }
 
+    .left-content {
+      display: flex;
+      flex-direction: column;
+      gap: 68px;
+      width: 707px;
+    }
 
-
-  // Mobile styles
-  @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
-    padding: 40px 24px;
-    flex-direction: column;
-
-
-
-    .content-frame {
-      width: 100%;
-      gap: 40px;
-
-      .newsletter-title {
-        font-size: 36px;
-        text-align: center;
-      }
-
-      .input-container {
-        width: 100%;
-        flex-direction: column;
+    .right-content {
+      flex-shrink: 0;
+      
+      svg {
+        max-width: 100%;
         height: auto;
-        padding: 20px;
-        gap: 16px;
-
-        .email-input {
-          width: 100%;
-          padding: 12px 0;
-        }
-
-        .cta-button {
-          width: 100%;
-          height: 48px;
-        }
       }
     }
   }

@@ -54,14 +54,24 @@
 
           .brand-text {
             color: #1E1E1E;
-            font-family: 'At Gambit', serif;
+            font-family: "At Gambit";
             font-size: 20px;
-            font-weight: 600;
-            line-height: 1.02em;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 102%;
             text-align: left;
             width: 379px;
             height: fit-content;
             margin: 0;
+
+            .italic-text {
+              color: #1E1E1E;
+              font-family: "At Gambit";
+              font-size: 20px;
+              font-style: italic;
+              font-weight: 400;
+              line-height: 102%;
+            }
           }
         }
 

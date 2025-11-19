@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
               </div>
               
               <!-- Brand Text -->
-              <p class="brand-text">La rentabilidad más alta proviene de quienes apuestan por su propio crecimiento.</p>
+              <p class="brand-text">La rentabilidad más alta proviene de quienes apuestan por su <span class="italic-text">propio crecimiento</span>.</p>
             </div>
             
             <!-- Social Icons -->
