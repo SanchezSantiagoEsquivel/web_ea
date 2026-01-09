@@ -1,0 +1,13 @@
+{
+  "buildCommand": "ng build",
+  "outputDirectory": "dist/web-ea",
+  "devCommand": "ng serve",
+  "installCommand": "npm install",
+  "framework": "angular",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.space-container{
+    margin-top: 100px;
+    width: 100%;display: flex;justify-content: center;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 817px;
+    height: 477px;
+    gap: 42px;
+    .images{
+        width: 247px;
+        height: 477px;
+    }
+
+.information{
+    width: 528px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    height: 358px;
+            padding-left: var(--space-md);
+
+    h3{
+        width: 502px;
+        font-family: var(--font-primary);
+        font-weight: 700;
+        font-style: bold;
+        color: var(--color-primary);
+        font-size: var(--font-size-body);
+        color: #56483B;
+    }
+    h2{
+        width: 528px;
+        height: 86px;
+        font-family: var(--font-secondary);
+        font-weight: 400;
+        font-size: 36px;
+        color: var(--color-primary);
+        font-size: var(--font-size-h3);
+        color: #1E1E1E;
+        letter-spacing: 0%;
+        line-height: 120%;
+    }
+    .description{
+        margin-top: 24px;
+        height: 121px;
+        p{
+             letter-spacing: 0%;
+        line-height: 137%;
+            font-family: var(--font-primary);
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--color-primary);
+            font-size: var(--font-size-body);
+            color: #1E1E1E;
+        }
+    }
+    .autor{
+        p{
+            font-family: var(--font-primary);
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--color-primary);
+            font-size: var(--font-size-body-lg);
+            color: #1E1E1E;
+        }
+        .position{
+
+                font-family: var(--font-primary);
+                font-weight: 400;
+                font-size: 16px;
+                color: var(--color-primary);
+                font-size: var(--font-size-body-s);
+                color: #737373;
+        }
+    }
+}
+}
+.icon{
+    position: absolute;
+    top: 420px;
+    left: 315px;  
+}
+
+.arrow-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 100px;
+}
+
+.carousel-viewport {
+  width: 817px; // mismo ancho del main-container
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}

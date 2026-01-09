@@ -1,0 +1,104 @@
+// Desktop-First Breakpoints Strategy
+// Comenzamos desde desktop (1440px+) y descendemos progresivamente
+
+// Breakpoints principales
+$breakpoints: (
+  'desktop-xl': 1920px,   // Pantallas muy grandes
+  'desktop-lg': 1440px,   // Desktop estándar (diseño base)
+  'desktop-md': 1200px,   // Desktop pequeño
+  'laptop': 1024px,       // Laptop
+  'tablet-lg': 768px,     // Tablet horizontal
+  'tablet-sm': 640px,     // Tablet vertical
+  'mobile-lg': 480px,     // Móvil grande
+  'mobile-md': 375px,     // Móvil estándar
+  'mobile-sm': 320px      // Móvil pequeño
+);
+
+// Mixins para media queries desktop-first (max-width)
+@mixin desktop-xl {
+  @media (min-width: #{map-get($breakpoints, 'desktop-xl')}) {
+    @content;
+  }
+}
+
+@mixin desktop-lg-down {
+  @media (max-width: #{map-get($breakpoints, 'desktop-lg') - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-md-down {
+  @media (max-width: #{map-get($breakpoints, 'desktop-md') - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop-down {
+  @media (max-width: #{map-get($breakpoints, 'laptop') - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg-down {
+  @media (max-width: #{map-get($breakpoints, 'tablet-lg') - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-sm-down {
+  @media (max-width: #{map-get($breakpoints, 'tablet-sm') - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-lg-down {
+  @media (max-width: #{map-get($breakpoints, 'mobile-lg') - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-md-down {
+  @media (max-width: #{map-get($breakpoints, 'mobile-md') - 1px}) {
+    @content;
+  }
+}
+
+// Mixins para rangos específicos
+@mixin tablet-only {
+  @media (min-width: #{map-get($breakpoints, 'tablet-sm')}) and (max-width: #{map-get($breakpoints, 'laptop') - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: #{map-get($breakpoints, 'tablet-sm') - 1px}) {
+    @content;
+  }
+}
+
+// Container responsive
+@mixin container-responsive {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5rem; // 80px desktop
+  
+  @include desktop-md-down {
+    padding: 0 4rem; // 64px
+  }
+  
+  @include laptop-down {
+    padding: 0 3rem; // 48px
+  }
+  
+  @include tablet-lg-down {
+    padding: 0 2rem; // 32px
+  }
+  
+  @include mobile-lg-down {
+    padding: 0 1.5rem; // 24px
+  }
+  
+  @include mobile-md-down {
+    padding: 0 1rem; // 16px
+  }
+}

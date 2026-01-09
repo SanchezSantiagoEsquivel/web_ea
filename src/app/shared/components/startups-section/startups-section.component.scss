@@ -1,0 +1,221 @@
+.startups-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 900px;
+  background: #EDEBE5;
+  align-items: stretch;
+  gap: 10px;
+  overflow: hidden;
+
+  .video-container {
+    position: relative;
+    width: 60%;
+    height: 900px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 56px 0 24px;
+
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(163deg, rgba(28, 28, 28, 0) 0%, rgba(28, 28, 28, 1) 100%),
+        linear-gradient(100deg, rgba(255, 255, 255, 0) 3%, rgba(237, 235, 229, 1) 97%);
+      z-index: 2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100%;
+      background: linear-gradient(270deg, #EDEBE5 5%, rgba(237, 235, 229, 0) 97.18%);
+      z-index: 3;
+      pointer-events: none;
+    }
+  }
+
+  .content-card {
+    position: absolute;
+    top: 15.67%;
+    left: 53%;
+    width: 46%;
+    max-width: 630px;
+    height: 64.33%;
+    background: rgba(91, 73, 59, 0.8);
+    backdrop-filter: blur(22px);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    z-index: 3;
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+
+      .header-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 571px;
+
+        .title-group {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          padding-left: 26px;
+          width: 528px;
+
+          .label {
+            color: #FFFFFF;
+            font-family: "Lato";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.2;
+          }
+
+          .divider {
+            width: 96px;
+            height: 1px;
+            background: rgba(225, 226, 221, 0.6);
+          }
+
+          .title {
+            max-width: 450px;
+            color: #FFF;
+            text-align: center;
+            font-family: "At Gambit";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120.192%;
+            margin: 0;
+
+            .italic-text {
+              font-style: italic;
+            }
+          }
+        }
+
+        .description-group {
+          display: flex;
+          justify-content: center;
+          gap: 32px;
+          height: 120px;
+
+          .vertical-line {
+            width: 1.87px;
+            height: 120px;
+            background: rgba(164, 151, 138, 0.5);
+          }
+
+          .description {
+            flex: 1;
+            color: #FFF;
+            font-family: "Aeonik TRIAL";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 137%;
+            margin: 0;
+          }
+        }
+      }
+
+      .platforms {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+
+        .platform-button {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 8px;
+          height: 64px;
+          background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 100%);
+          border: 1.5px solid rgba(255, 255, 255, 0.5);
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.55) 100%);
+          }
+
+          .button-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            svg {
+              display: block;
+            }
+
+            .platform-logo {
+              width: auto;
+              height: 50px;
+            }
+          }
+
+          &.youtube {
+            width: 146.12px;
+            height: 63.9px;
+
+            .platform-logo {
+              height: 45px;
+            }
+          }
+        }
+      }
+    }
+
+    .phone-image {
+      width: 100%;
+      max-width: 354px;
+      height: auto;
+      border: 3px solid #EDEBE5;
+      border-radius: 50px 50px 0 0;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: #EDEBE5;
+    }
+
+    .phone-border {
+      width: 100%;
+      max-width: 354px;
+      height: 173px;
+      background: #EDEBE5;
+      border: 3px solid #EDEBE5;
+      border-radius: 56px 56px 0 0;
+    }
+  }
+}

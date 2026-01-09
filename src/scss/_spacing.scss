@@ -1,0 +1,154 @@
+// Spacing System - Desktop First
+@import 'breakpoints';
+
+// Spacing scale - Desktop base
+:root {
+  --space-xs: 0.5rem;    // 8px
+  --space-sm: 1rem;      // 16px
+  --space-md: 1.5rem;    // 24px
+  --space-lg: 2rem;      // 32px
+  --space-xl: 3rem;      // 48px
+  --space-2xl: 4rem;     // 64px
+  --space-3xl: 5rem;     // 80px
+  --space-4xl: 6rem;     // 96px
+  --space-5xl: 8rem;     // 128px
+  
+  // Section spacing
+  --section-padding-y: var(--space-5xl);
+  --section-padding-x: var(--space-3xl);
+}
+
+// Responsive spacing adjustments
+@include desktop-md-down {
+  :root {
+    --space-3xl: 4rem;     // 64px
+    --space-4xl: 5rem;     // 80px
+    --space-5xl: 6rem;     // 96px
+    --section-padding-y: var(--space-4xl);
+    --section-padding-x: var(--space-2xl);
+  }
+}
+
+@include laptop-down {
+  :root {
+    --space-3xl: 3rem;     // 48px
+    --space-4xl: 4rem;     // 64px
+    --space-5xl: 5rem;     // 80px
+    --section-padding-y: var(--space-3xl);
+  }
+}
+
+@include tablet-lg-down {
+  :root {
+    --space-2xl: 3rem;     // 48px
+    --space-3xl: 2.5rem;   // 40px
+    --space-4xl: 3rem;     // 48px
+    --space-5xl: 4rem;     // 64px
+    --section-padding-y: var(--space-2xl);
+    --section-padding-x: var(--space-lg);
+  }
+}
+
+@include mobile-lg-down {
+  :root {
+    --space-xl: 2rem;      // 32px
+    --space-2xl: 2.5rem;   // 40px
+    --space-3xl: 2rem;     // 32px
+    --space-4xl: 2.5rem;   // 40px
+    --space-5xl: 3rem;     // 48px
+    --section-padding-y: var(--space-xl);
+    --section-padding-x: var(--space-md);
+  }
+}
+
+// Utility classes for spacing
+.m {
+  &-0 { margin: 0; }
+  &-xs { margin: var(--space-xs); }
+  &-sm { margin: var(--space-sm); }
+  &-md { margin: var(--space-md); }
+  &-lg { margin: var(--space-lg); }
+  &-xl { margin: var(--space-xl); }
+  &-2xl { margin: var(--space-2xl); }
+  &-3xl { margin: var(--space-3xl); }
+  
+  &t {
+    &-0 { margin-top: 0; }
+    &-xs { margin-top: var(--space-xs); }
+    &-sm { margin-top: var(--space-sm); }
+    &-md { margin-top: var(--space-md); }
+    &-lg { margin-top: var(--space-lg); }
+    &-xl { margin-top: var(--space-xl); }
+    &-2xl { margin-top: var(--space-2xl); }
+    &-3xl { margin-top: var(--space-3xl); }
+  }
+  
+  &b {
+    &-0 { margin-bottom: 0; }
+    &-xs { margin-bottom: var(--space-xs); }
+    &-sm { margin-bottom: var(--space-sm); }
+    &-md { margin-bottom: var(--space-md); }
+    &-lg { margin-bottom: var(--space-lg); }
+    &-xl { margin-bottom: var(--space-xl); }
+    &-2xl { margin-bottom: var(--space-2xl); }
+    &-3xl { margin-bottom: var(--space-3xl); }
+  }
+}
+
+.p {
+  &-0 { padding: 0; }
+  &-xs { padding: var(--space-xs); }
+  &-sm { padding: var(--space-sm); }
+  &-md { padding: var(--space-md); }
+  &-lg { padding: var(--space-lg); }
+  &-xl { padding: var(--space-xl); }
+  &-2xl { padding: var(--space-2xl); }
+  &-3xl { padding: var(--space-3xl); }
+  
+  &y {
+    &-0 { padding-top: 0; padding-bottom: 0; }
+    &-xs { padding-top: var(--space-xs); padding-bottom: var(--space-xs); }
+    &-sm { padding-top: var(--space-sm); padding-bottom: var(--space-sm); }
+    &-md { padding-top: var(--space-md); padding-bottom: var(--space-md); }
+    &-lg { padding-top: var(--space-lg); padding-bottom: var(--space-lg); }
+    &-xl { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+    &-2xl { padding-top: var(--space-2xl); padding-bottom: var(--space-2xl); }
+    &-3xl { padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+  }
+  
+  &x {
+    &-0 { padding-left: 0; padding-right: 0; }
+    &-xs { padding-left: var(--space-xs); padding-right: var(--space-xs); }
+    &-sm { padding-left: var(--space-sm); padding-right: var(--space-sm); }
+    &-md { padding-left: var(--space-md); padding-right: var(--space-md); }
+    &-lg { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+    &-xl { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+    &-2xl { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
+    &-3xl { padding-left: var(--space-3xl); padding-right: var(--space-3xl); }
+  }
+}
+
+// Section spacing
+.section {
+  padding: var(--section-padding-y) 0;
+  
+  &--compact {
+    padding: var(--space-2xl) 0;
+    
+    @include mobile-lg-down {
+      padding: var(--space-xl) 0;
+    }
+  }
+  
+  &--spacious {
+    padding: var(--space-5xl) 0;
+    
+    @include tablet-lg-down {
+      padding: var(--space-3xl) 0;
+    }
+    
+    @include mobile-lg-down {
+      padding: var(--space-2xl) 0;
+    }
+  }
+}

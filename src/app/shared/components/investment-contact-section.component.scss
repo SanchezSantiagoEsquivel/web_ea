@@ -1,0 +1,141 @@
+.investment-contact-section {
+  display: flex;
+  align-items: center;
+  width: 1440px;
+  height: 516px;
+  background: #EDEBE5;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 68px;
+  flex: 1;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  gap: 68px;
+  padding: 80px 60px;
+  flex: 1;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: 68px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: 32px;
+}
+
+.icon-container {
+  width: 70px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.section-title {
+  font-family: 'At Gambit', sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.08;
+  text-align: center;
+  color: #1E1E1E;
+  margin: 0;
+  width: 100%;
+}
+
+.section-description {
+  font-family: 'Aeonik TRIAL', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.37;
+  text-align: center;
+  color: #1E1E1E;
+  margin: 0;
+  width: 450px;
+}
+
+.contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid #0F1018;
+  color: #0F1018;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.02;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  
+  &:hover {
+    background: #0F1018;
+    color: #FFFFFF;
+  }
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .investment-contact-section {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .text-section {
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .section-description {
+    width: 100%;
+    max-width: 450px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .section-description {
+    font-size: 14px;
+  }
+}

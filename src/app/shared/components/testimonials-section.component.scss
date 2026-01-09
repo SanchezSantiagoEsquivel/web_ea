@@ -1,0 +1,256 @@
+.testimonials-section {
+  background: #FDFCF8;
+  padding: 56px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  position: relative;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 267px;
+  left: 0;
+  width: 724px;
+  height: 262px;
+  background: linear-gradient(131deg, rgba(89, 71, 57, 1) 0%, rgba(89, 71, 57, 0) 62%);
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  width: 1140px;
+  height: fit-content;
+}
+
+.books-image {
+  width: 729.32px;
+  height: 683.69px;
+  flex-shrink: 0;
+  
+  .books-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 26px;
+  width: 528px;
+}
+
+.testimonials-label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #56483B;
+  width: fit-content;
+}
+
+.section-title {
+  font-family: 'At Gambit', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #1E1E1E;
+  margin: 0;
+  width: 493px;
+  
+  .eduardo-highlight {
+    color: #776B5D;
+    font-family: "At Gambit";
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 120.192%;
+  }
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.testimonial-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.divider-line {
+  width: 2px;
+  height: 121px;
+  background: rgba(164, 151, 138, 0.5);
+  flex-shrink: 0;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.5px;
+    left: -1px;
+    width: 1.87px;
+    height: 4.96px;
+    background: #39382B;
+  }
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  flex: 1;
+}
+
+.testimonial-quote {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.37;
+  color: #1E1E1E;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  
+  .highlight {
+    color: #776B5D;
+    font-family: 'Lato';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137%;
+  }
+}
+
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  padding-left: 34px;
+  width: 328px;
+}
+
+.stats-container {
+  display: flex;
+  gap: 86px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: fit-content;
+  
+  .stat-number {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.24;
+    color: #1C1C1C;
+    text-align: left;
+    
+    .plus-highlight {
+      color: #594739;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 62px;
+    }
+  }
+  
+  .stat-label {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.1;
+    color: #514F6E;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .testimonials-section {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  
+  .content-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .books-image {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+  }
+  
+  .title-section {
+    padding-left: 0;
+    width: 100%;
+  }
+  
+  .section-title {
+    width: 100%;
+  }
+  
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .gradient-overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .testimonial-quote {
+    font-size: 14px;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+  }
+  
+  .stat-label {
+    font-size: 16px;
+  }
+}
